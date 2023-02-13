@@ -39,14 +39,10 @@ query_params = [
 
 
 ### Query Job Configurations
+job_config = bigquery.QueryJobConfig()
+job_config.query_parameters = query_params
 
-job_config = bigquery.QueryJobConfig(
-    query_parameters = query_params
-    )
 
-# execute the query
-query_job = client.query(query, job_config=job_config)
-
-# load query
-df = client.query(SQL_query).to_dataframe()
-df.head()
+# execute and load the query
+query_df = client.query(query, job_config=job_config).to_dataframe()
+query_df.head()
