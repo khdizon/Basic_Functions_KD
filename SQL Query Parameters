@@ -1,2 +1,39 @@
-# SQL Query Parameters
+### SQL Query Parameters ###
 
+from google.cloud import bigquery
+
+# BigQuery Connection 
+client = bigquery.Client(location="INSERT", project="INSERT")
+print("Client creating using default project: {}".format(client.project))
+
+%%%time
+
+# Example 1: Query a scalar value
+
+SQL_query = ("""
+SELECT ...
+FROM ...
+WHERE ...
+GROUP BY ...
+ORDER BY ...
+""") 
+
+query_params = [
+    bigquery.ScalarQueryParameter("____", "____", '%___%),
+    bigquery.ScalarQueryParameter("____", "____", '%___%),
+]
+
+job_config = bigquery.QueryJobConfig()
+job_config.query_parameters = query_params
+)
+query_job = client/query(query, job_config=job_config)
+
+df = client.query(SQL_query).to_dataframe()
+df.head()
+
+
+# Example 2: Query a date range
+
+
+
+# Example 3: Positional parameters
