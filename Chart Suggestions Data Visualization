@@ -1,0 +1,25 @@
+### Libraries
+
+import matplotlib.pyplot as plt
+import seaborn as sns
+import plotly.express as px
+
+
+
+### COLUMN CHART
+# Visualize SRM Counts
+plt.figure(figsize=(10,5))
+ax  = sns.barplot(data = SRM,
+                  x = "localDate", y = "SRM_count",
+                  hue = "RSU")
+
+plt.legend(title='RSU', bbox_to_anchor=(1.05, 1), loc=2, borderaxespad=0.)
+plt.title('SRM counts by Date and RSU')
+plt.xlabel('Date')
+plt.ylabel('SRM Counts')
+plt.show()
+
+
+
+
+
