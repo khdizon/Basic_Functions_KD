@@ -1,0 +1,16 @@
+### MAPBOX StreetMaps
+mapbox_access_token = 'pk.eyJ1IjoiZGl6b25rIiwiYSI6ImNsNno3YmR5czAxbHYzdW5xZ3hiajhkajMifQ.F7xeTKvCttPUQJFs-9Au9A'
+px.set_mapbox_access_token(mapbox_access_token)
+
+# Define the bounding box 
+Bbox_df = ((df.Lon.min(), df.Lon.max(),      
+         df.Lat.min(), df.Lat.max()))
+Bbox_df
+
+# Plot Figure
+mapbox_fig = px.scatter_mapbox(df, lat="__", lon="__", zoom=__, color='COL_NAME',
+                            hover_data = ['COL_NAME'],
+                            center=dict(lon=Bbox_df[0], lat=Bbox_df[3]),
+                            width=__, height=__,
+                            mapbox_style='____')
+mapbox_fig.show()
