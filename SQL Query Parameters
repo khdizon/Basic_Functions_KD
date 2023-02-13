@@ -1,15 +1,12 @@
 ### SQL Query Parameters ###
 
-from google.cloud import bigquery
-
 # BigQuery Connection 
+from google.cloud import bigquery
 client = bigquery.Client(location="INSERT", project="INSERT")
 print("Client creating using default project: {}".format(client.project))
 
+### SQL Statement
 %%%time
-
-# Example 1: Query a scalar value
-
 SQL_query = ("""
 SELECT ...
 FROM ...
@@ -18,22 +15,38 @@ GROUP BY ...
 ORDER BY ...
 """) 
 
+### EXAMPLE_PARAMETER
 query_params = [
-    bigquery.ScalarQueryParameter("____", "____", '%___%),
-    bigquery.ScalarQueryParameter("____", "____", '%___%),
+    bigquery.ScalarQueryParameter("INSERT_COL", "DTYPE", '%INSERT_VALUE%),
+    bigquery.ScalarQueryParameter("INSERT_COL", "DTYPE", INSERT_VALUE),
 ]
 
-job_config = bigquery.QueryJobConfig()
-job_config.query_parameters = query_params
-)
-query_job = client/query(query, job_config=job_config)
-
-df = client.query(SQL_query).to_dataframe()
-df.head()
-
+# Example 1: Query a scalar value
+query_params_EG = [
+    bigquery.ScalarQueryParameter("title_COL", "STRING", '%SQL%),
+    bigquery.ScalarQueryParameter("score_COL", "INT64", 50,
+]
 
 # Example 2: Query a date range
-
+query_params = [
+    bigquery.ScalarQueryParameter("startdate", "DATETIME", "datetime.datetime(YYYY, M, D)),
+    bigquery.ScalarQueryParameter("enddate", "DATETIME", "datetime.datetime(YYYY, M, D)),
+]
 
 
 # Example 3: Positional parameters
+
+
+
+### Query Job Configurations
+
+job_config = bigquery.QueryJobConfig(
+    query_parameters = query_params
+    )
+
+# execute the query
+query_job = client.query(query, job_config=job_config)
+
+# load query
+df = client.query(SQL_query).to_dataframe()
+df.head()
