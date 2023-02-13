@@ -24,7 +24,7 @@ query_params = [
 # Example 1: Query a scalar value
 query_params_EG = [
     bigquery.ScalarQueryParameter("title_COL", "STRING", '%SQL%),
-    bigquery.ScalarQueryParameter("score_COL", "INT64", 50,
+    bigquery.ScalarQueryParameter("score_COL", "INT64", 50),
 ]
 
 # Example 2: Query a date range
