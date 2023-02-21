@@ -1,0 +1,25 @@
+### COMMANDS, FUNCTIONS, METHODS ###
+
+
+
+### LIST
+# A list is denoted by square brackets [], 
+# and its elements can be accessed by their index. 
+# For example:
+
+my_list = ['apple', 'banana', 'cherry']
+
+print(my_list[0])  # Output: 'apple'
+print(my_list[1])  # Output: 'banana'
+print(my_list[2])  # Output: 'cherry'
+
+### DICTIONARY
+# A dictionary is denoted by curly braces {}, 
+# and its values can be accessed by their keys. 
+# For example:
+
+my_dict = {'name': 'Alice', 'age': 30, 'country': 'USA'}
+
+print(my_dict['name'])     # Output: 'Alice'
+print(my_dict['age'])      # Output: 30
+print(my_dict['country'])  # Output: 'USA'
