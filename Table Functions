@@ -1,5 +1,15 @@
 ### Using PANDAS ###
 
+# Title
+## Heading
+### Subheading
+**Objective**
+
+Version | Date | Author | Notes |
+:------:|:---:|:-------:|:-----:|
+1.0 |DD Month YYYY | Ken Dizon | Initial version
+1.1 |DD Month YYYY | Ken Dizon | Next...
+
 # loading data
 df = pd.read_csv('title/folder.csv')
 df
