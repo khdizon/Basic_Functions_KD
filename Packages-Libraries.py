@@ -1,5 +1,9 @@
 ### Python Libraries ###
 
+Version  | Date | Author | Notes |
+:-------:|:----:|:-------|:-----:|
+0.1 |23 July 2023| Ken Dizon | Initial version |
+
 # base 
 import pandas as pd #dataframes
 import numpy as np #math library 
