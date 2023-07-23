@@ -1,5 +1,9 @@
 ### DATA EXPLORATION ###
 
+Version  | Date | Author | Notes |
+:-------:|:----:|:-------|:-----:|
+0.1 |23 July 2023| Ken Dizon | Initial version |
+
 df.head()
 df.tail()
 df.shape #Rows and Columns (attributes, features)
