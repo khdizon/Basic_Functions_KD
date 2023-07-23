@@ -4,6 +4,9 @@
 #3 Scaling
 #4 Feature Engineering/Selection
 
+Version  | Date | Author | Notes |
+:-------:|:----:|:-------|:-----:|
+0.1 |23 July 2023| Ken Dizon | Initial version |
 
 
 # copy of original data failsafe
