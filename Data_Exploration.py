@@ -38,6 +38,13 @@ for col in categorical_columns:
 or
 df.nunique()
 
+# Checking if a specific categorical value is in a column
+find_value = input('Enter a categorical value:')
+if find_value in df['X1'].values:
+    print(f"'{find_value}' exists in the 'X1' column.")
+else:
+    print(f"'{find_value}' does not exist in the 'X1' column.")
+
 # Create a correlation matrix for numeric columns
 correlation_matrix = df.corr()
     # Plot a heatmap to visualize the correlation matrix
