@@ -1,31 +1,25 @@
 ### Python Libraries ###
 
-import pandas as pd
-import numpy as np
+# base 
+import pandas as pd #dataframes
+import numpy as np #math library 
+import scipy #computation
 
-
-### Data Viusalization Libraries
-
-import matplotlib.pyplot as plt
+# base visualization
+import matplotlib.pyplot as plt 
 %matplotlib inline
-
-import seaborn as sns
-sns.set() 
-
 import plotly.express as px
 
 
+# warnings off
+import warnings
+warnings.filterwarnings("ignore")
+
+
+#ipy
 import ipyleaflet as ipl
 import ipywidgets as ipw
 from ipyleaflet import (basemaps, Map, Marker, CircleMarker, MarkerCluster,
                         Icon, SearchControl, FullScreenControl, LayerGroup)
+import ipywidgets as ipw
 from ipywidgets import (Text, HTML)
-
-
-
-
-
-
-
-import warnings
-warnings.filterwarnings("ignore")
