@@ -4,6 +4,8 @@ Version  | Date | Author | Notes |
 :-------:|:----:|:-------|:-----:|
 0.1 |23 July 2023| Ken Dizon | Initial version |
 
+___________
+
 df.head()
 df.tail()
 df.shape #Rows and Columns (attributes, features)
