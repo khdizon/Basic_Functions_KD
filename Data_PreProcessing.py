@@ -40,10 +40,15 @@ df_copy.drop(df_copy.index[0], inplace=True) #first row only
 # Drop duplicates, if necessary
 df_copy.drop_duplicates()
 
+### Data Types
+df.dtypes
+# Changing Data Types
+df['X1'] = df['X1'].astype('int') #int
+
 # Fill missing values, if necessary
 df_copy.fillna(value)
 
-# Boolean array with comparison opperator to filter df
+# Boolean array with comparison operator to filter df
 df['X1'] == 'Category'
 # Selecting specific column and value
 X1_df = df[df['X1'] == 'Category']
