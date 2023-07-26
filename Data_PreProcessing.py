@@ -8,7 +8,6 @@ Version  | Date | Author | Notes |
 :-------:|:----:|:-------|:-----:|
 0.1 |23 July 2023| Ken Dizon | Initial version |
 
-
 # copy of original data failsafe
 df_copy = df.copy()
 
@@ -31,24 +30,41 @@ df.X1.isnull().sum() # single column
 df.X1.isnull().sum() / df.shape[0] * 100
 
 
+### Working with Pandas
+# Rows
+df.iloc[0]
+df.iloc[[0,3,4,7]]
+# Columns
+df['X1']
+df['X1', 'X2']
+    # Columns using index (Row, Column)
+df.iloc[5:8, :] #rows 5,6,7 all columns
+df.iloc[:, 0:2] #all rows first two columns
+# Slices
+import string
+alpha = string.ascii_letters
+alpha[0:5] #first five
+alpha[:5] #up to five
+alpha[-1] #last character
+alpha[-5:] #last five
+
+
 # Drop columns 
 df_copy.drop(columns=['X'], inplace=True)
 # Drop rows with missing values
 df_copy.dropna()
 df_copy.drop(df_copy.index[0], inplace=True) #first row only
 
+
 # Drop duplicates, if necessary
 df_copy.drop_duplicates()
 
-### Data Types
-df.dtypes
-# Changing Data Types
-df['X1'] = df['X1'].astype('int') #int
 
 # Fill missing values, if necessary
 df_copy.fillna(value)
 
-# Boolean array with comparison operator to filter df
+
+# Boolean array with comparison opperator to filter df
 df['X1'] == 'Category'
 # Selecting specific column and value
 X1_df = df[df['X1'] == 'Category']
@@ -57,9 +73,11 @@ X1_df.head()
 # If we had some missing X1 values, we might fill those with the median:
 df['X1'].fillna(df['X1'].median(), inplace=True)
 
+
 # Scaling and Cleaning for ML
 df['X1'] = df['X1'].replace({'Category 1': 0, 'Category 2': 1, 'Category 3':2})
 df['X1']
+
 
 # Correlation - ML Feature Selection
 sns.scatterplot(data=df,x='X1', y='X2',hue='Category n') # specific X and Y
