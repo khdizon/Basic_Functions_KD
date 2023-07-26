@@ -18,6 +18,12 @@ import plotly.express as px
 # warnings off
 import warnings
 warnings.filterwarnings("ignore")
+# or
+# Surpress warnings:
+def warn(*args, **kwargs):
+    pass
+import warnings
+warnings.warn = warn
 
 
 #ipy
