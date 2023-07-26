@@ -45,6 +45,20 @@ if find_value in df['X1'].values:
 else:
     print(f"'{find_value}' does not exist in the 'X1' column.")
 
+    
+# Aggregating numeric values
+df['X1'].agg( ['sum', 'mean', 'median', 'min', 'max', 'std', 'var', 'mad', 'prod'] ) 
+or
+df['X1'].agg( ['sum', 'mean'] )
+or
+df.agg( {'X1' : ['sum', 'mean'],
+         'X2' : ['count'] } )
+
+# Groupby
+df.groupby(['X1']).agg( {'X2':['sum', 'mean', 'median', 'min',
+                               'max', 'std', 'var', 'mad', 'prod']} )
+
+
 # Create a correlation matrix for numeric columns
 correlation_matrix = df.corr()
     # Plot a heatmap to visualize the correlation matrix
