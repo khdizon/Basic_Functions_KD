@@ -69,6 +69,8 @@ df['X1'] == 'Category'
 # Selecting specific column and value
 X1_df = df[df['X1'] == 'Category']
 X1_df.head()
+or
+subset = df[df['X1'] == selected_value]
 
 # If we had some missing X1 values, we might fill those with the median:
 df['X1'].fillna(df['X1'].median(), inplace=True)
