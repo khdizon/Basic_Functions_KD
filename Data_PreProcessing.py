@@ -11,6 +11,11 @@ Version  | Date | Author | Notes |
 # copy of original data failsafe
 df_copy = df.copy()
 
+# Join and Combine a dataset
+merge(): To combine the datasets on common column or index or both.
+concat(): To combine the datasets across rows or columns.
+join(): To combine the datasets on key column or index.
+
 # check missing values
 df.isnull().sum()
 
