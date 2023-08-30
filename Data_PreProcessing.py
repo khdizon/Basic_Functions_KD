@@ -11,6 +11,14 @@ Version  | Date | Author | Notes |
 # copy of original data failsafe
 df_copy = df.copy()
 
+# Rename the column
+df.rename(columns={'old_column_name': 'new_column_name',
+                  'x2': 'X2'}, inplace=True)
+
+# Reorganize columns
+new_order = ['column_B', 'column_C', 'column_A']
+new_df = df[new_order]
+
 # Join and Combine a dataset
 merge(): To combine the datasets on common column or index or both.
 concat(): To combine the datasets across rows or columns.
