@@ -76,7 +76,11 @@ df_copy.drop_duplicates()
 # Fill missing values, if necessary
 df_copy.fillna(value)
 
-
+# Select row based on column value
+df.loc[df['col1'] == value] #Rows where Column is Equal to Specific Value
+df.loc[df['col1'].isin([value1, value2, value3, ...])] #Rows where Column Value is in List of Values
+df.loc[(df['col1'] == value) & (df['col2'] < value)] #Based on Multiple Column Conditions
+  
 # Boolean array with comparison opperator to filter df
 df['X1'] == 'Category'
 # Selecting specific column and value
