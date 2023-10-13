@@ -61,6 +61,9 @@ alpha[:5] #up to five
 alpha[-1] #last character
 alpha[-5:] #last five
 
+# Set a row as column name by index
+df.columns = df.iloc[1]
+  
 
 # Drop columns 
 df_copy.drop(columns=['X'], inplace=True)
